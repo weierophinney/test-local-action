@@ -15,6 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Emit
-        uses: ./github/actions/hello-world
+        uses: ./.github/actions/hello-world
         with:
           person: universe
