@@ -14,6 +14,7 @@ jobs:
     name: Send a greeting
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Emit
         uses: ./.github/actions/hello-world
         with:
