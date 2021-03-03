@@ -1,0 +1,17 @@
+# Definition of the github action
+# as per https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action
+
+name: 'hello-world'
+description: 'Emit a Hello World'
+
+inputs:
+  person:
+    description: |
+       Name of person to greet.
+    required: true
+
+runs:
+  using: 'docker'
+  image: '../../Dockerfile'
+  args:
+    - ${{ inputs.person }}

@@ -1,0 +1,19 @@
+name: "Hello World"
+
+on:
+  pull_request:
+  push:
+    branches:
+      - '[0-9]+.[0-9]+.x'
+      - 'refs/pull/*'
+    tags:
+
+jobs:
+  greet:
+    name: Send a greeting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Emit
+        uses: ./github/actions/hello-world
+        with:
+          person: universe
